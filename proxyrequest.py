@@ -63,13 +63,6 @@ class ProxyRequest:
         return random.sample(self.proxyList, 1)[0]
 
 
-    def getRandomUserAgent(self):
-        if len(self.userAgentList) <= 0:
-            self.refreshUserAgentList()
-
-        return random.choice(self.proxyList)
-
-
     def refreshProxyList(self):
         print("REFRESHING PROXY LIST")
         self.proxyList.clear()
